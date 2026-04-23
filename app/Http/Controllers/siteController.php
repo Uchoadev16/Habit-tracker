@@ -7,12 +7,13 @@ class siteController extends Controller
 {
     public function index(){
 
-    $nome = "Pedro Uchôa";
+    $name = "Pedro Uchôa";
     $habits = ['ler', 'escreve', 'falar'];
     
-    return view("home", [
-        "name" => $nome,
-        "habits"=> $habits
-        ]);
+    return view("home", compact("name","habits"));
+    }
+
+    public function dashboard(){
+        return view("dashboard");
     }
 }
