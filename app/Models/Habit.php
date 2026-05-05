@@ -8,6 +8,6 @@ class Habit extends Model
 {
     protected $fillable = [
         'user_id',
-        'name',
-    ]
+        'name'
+    ];
 }

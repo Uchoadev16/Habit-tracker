@@ -9,6 +9,6 @@ class HabitLog extends Model
     protected $fillable = [
         'user_id',
         'habit_id',
-        'completed_at',
-    ]
+        'completed_at'
+    ];
 }
