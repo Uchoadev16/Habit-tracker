@@ -1,0 +1,17 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Habit;
+use App\Models\HabitLog;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class HabitLogSeeder extends Seeder
+{
+
+    public function run(): void
+    {
+       HabitLog::factory()->count(10)->create();
+    }
+}
