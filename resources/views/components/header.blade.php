@@ -5,11 +5,6 @@
         logo
     </div>
 
-    {{-- github --}}
-    <div>
-        github
-    </div>
-
     @auth
     <form action="{{ route('auth.logout') }}" method="post">
         <button type="submit" class="bg-white p-2 border-2">
