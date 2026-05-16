@@ -1,18 +1,18 @@
 <x-layout>
     <main class="py-10">
-        <h1 class="font-bold text-4x1 text-center" >
+        <h1 class="font-bold text-4x1 text-center">
             Dashboard
         </h1>
-        
-        <a href="{{ route('habit.create') }}" class="p-2 border-2 bg-white font-bold">
-        Cadastrar Hábito</a>
 
-       
+        <a href="{{ route('habit.create') }}" class="p-2 border-2 bg-white font-bold">
+            Cadastrar Hábito</a>
+
+
         <p class="bg-green-100 border border-green-500 px-2 block mt-4 max-w-[200px]">
-{{ session('success') }}
+            {{ session('success') }}
         </p>
 
-         @session('success')
+        @session('success')
         @endsession
         <div>
             <h2 class="text-xl mt-4">
@@ -29,6 +29,16 @@
                             <p class="">
                                 [{{ $item->habitLogs->count() }}]
                             </p>
+                            <form action="{{ route('habit.destroy', $item) }}" method="post">
+
+                                @method('DELETE');
+
+                                <button
+                                type="submit" class="bg-red-500 text-white p-1 
+                                hover:opacity-50 cursor-pointer">
+                                    <x-icons.trash />
+                                </button>
+                            </form>
                         </div>
                     </li>
                 @empty
